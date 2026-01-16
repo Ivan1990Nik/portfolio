@@ -1,0 +1,157 @@
+/* src/components/header/header.css */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(18, 18, 18, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #2a2a2a;
+
+  animation: headerAppear 0.6s ease-out forwards;
+}
+@keyframes headerAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.header__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffd700;
+}
+
+/* Desktop nav */
+.header__nav.desktop {
+  display: flex;
+  gap: 24px;
+}
+
+.header__nav a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.header__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.header__nav a:hover {
+  color: #ffd700;
+}
+
+.header__nav a:hover::after {
+  width: 100%;
+}
+/* Burger */
+.burger {
+  display: none;
+  width: 26px;
+  height: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger span {
+  height: 3px;
+  width: 100%;
+  background: #ffd700;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+  background: #121212;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  transition: right 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+  z-index: 200;
+}
+
+.mobile-menu.open {
+  right: 0;
+  opacity: 1;
+}
+
+.mobile-menu a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 150;
+}
+
+/* Mobile rules */
+@media (max-width: 768px) {
+  .header__nav.desktop {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+  .mobile-menu a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.mobile-menu a:hover {
+  transform: translateX(6px);
+  color: #ffd700;
+}
+}
