@@ -1,7 +1,9 @@
-export default function handler(req, res) {
-  res.status(200).json({
-    ok: true,
-    message: "API работает",
+// portfolio/app/api/hello/route.js
+import { NextResponse } from 'next/server';
 
+export async function GET() {
+  return NextResponse.json({
+    message: "✅ РАБОТАЕТ!",
+    ok: true
   });
 }
