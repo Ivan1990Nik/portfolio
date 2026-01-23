@@ -12,7 +12,7 @@
   padding: 48px 20px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   gap: 32px;
 }
 
@@ -28,15 +28,14 @@
   line-height: 1.5;
 }
 
-.footer__nav,
-.footer__contacts {
-  display: flex;
+.footer__nav {
   flex-direction: column;
   gap: 12px;
 }
 
 .footer__nav a,
 .footer__contacts a {
+   margin-left: 15px;
   color: #eaeaea;
   text-decoration: none;
   font-size: 14px;
@@ -74,8 +73,7 @@
     font-size: 13px;
   }
 
-  .footer__nav,
-  .footer__contacts {
+  .footer__nav {
     align-items: center;
   }
 
@@ -106,13 +104,10 @@
 
 
 @media (max-width: 768px) {
-  .footer__container {
-    grid-template-columns: 1fr;
-  }
 
   .footer__brand,
-  .footer__nav,
-  .footer__contacts {
+  .footer__nav {
+display: flex;
     background: #181818;
     padding: 20px;
     border-radius: 14px;

@@ -19,7 +19,7 @@ const Header = () => {
           <a href="#about">Обо мне</a>
           <a href="#projects">Проекты</a>
           <a href="#skills">Навыки</a>
-          <a href="#contact">Контакты</a>
+          <a href="#contacts">Контакты</a>
         </nav>
 
         {/* Burger */}
@@ -38,7 +38,7 @@ const Header = () => {
         <a href="#about" onClick={closeMenu}>Обо мне</a>
         <a href="#projects" onClick={closeMenu}>Проекты</a>
         <a href="#skills" onClick={closeMenu}>Навыки</a>
-        <a href="#contact" onClick={closeMenu}>Контакты</a>
+        <a href="#contacts" onClick={closeMenu}>Контакты</a>
       </div>
 
       {/* Overlay */}

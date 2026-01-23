@@ -8,14 +8,14 @@ const projects = [
       'Коммерческий сайт доставки еды. Реальный проект, используется бизнесом ежедневно. Полный цикл: от верстки до логики корзины и оформления заказа.',
     stack: ['React', 'JavaScript', 'Vite', 'CSS', 'EmailJS'],
     demo: 'https://www.masteroll.net', // если есть
-    github: 'https://ivan1990nik.github.io/masteroll-react/',
+    /* github: 'https://ivan1990nik.github.io/masteroll-react/', */
     highlight: true,
   },
   {
     title: "Посуточная аренда квартир",
     description: "Сайт для сдачи квартир посуточно. Каталог, адаптив, форма заявки.",
     stack: ['React', 'JavaScript', 'Vite', 'CSS', ],
-    demo: "https://...",
+    /* demo: "https://...", */
     github: 'https://masteroll.net',
     highlight: true,
     code: null

@@ -14,7 +14,7 @@ const Contacts = () => {
 
         <div className="contacts__links">
           <a
-            href="https://t.me/yourname"
+            href="https://t.me/ivan_BroNik"
             target="_blank"
             rel="noreferrer"
             className="contacts__item"
@@ -24,7 +24,7 @@ const Contacts = () => {
           </a>
 
           <a
-            href="https://github.com/yourname"
+            href="https://github.com/Ivan1990Nik"
             target="_blank"
             rel="noreferrer"
             className="contacts__item"
@@ -33,13 +33,6 @@ const Contacts = () => {
             <span>GitHub</span>
           </a>
 
-          <a
-            href="mailto:bro.dev@gmail.com?subject=Frontend project"
-            className="contacts__item"
-          >
-            <FaEnvelope />
-            <span>Email</span>
-          </a>
         </div>
       </div>
     </section>
