@@ -8,7 +8,7 @@ const About = () => {
         <h2 className="about__title">Обо мне</h2>
 
         <p className="about__text">
-  Меня зовут Ваня. Я frontend-разработчик, специализирующийся на JavaScript и React.
+  Меня зовут Ваня. Я frontend-разработчик, специализирующийся на JavaScript и React!!!
 </p>
 
 <p className="about__text">
