@@ -28,9 +28,18 @@
 .project-card {
   background: #1b1b1b;
   padding: 24px;
+    position: relative;
   border-radius: 16px;
   border: 1px solid #2a2a2a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
 }
 
 .project-card:hover {
@@ -100,4 +109,9 @@
   .projects__title {
     font-size: 26px;
   }
+}
+
+.project-card > * {
+  position: relative;
+  z-index: 1;
 }

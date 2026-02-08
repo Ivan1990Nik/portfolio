@@ -1,5 +1,6 @@
 // src/components/footer/Footer.jsx
 import "./footer.css";
+import logo from "../../../public/images/logo.PNG"
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="footer__container">
 
         <div className="footer__brand">
-          <h3>Бро.dev</h3>
+         <img src={logo} alt="" style={{width: 130}}/>
           <p>React-разработчик. Практика, рост, польза.</p>
         </div>
 

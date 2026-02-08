@@ -1,25 +1,35 @@
 // src/components/projects/Projects.jsx
-import './projects.css';
+import "./projects.css";
 
 const projects = [
   {
-    title: 'Сайт доставки роллов',
+    title: "Сайт доставки роллов",
     description:
-      'Коммерческий сайт доставки еды. Реальный проект, используется бизнесом ежедневно. Полный цикл: от верстки до логики корзины и оформления заказа.',
-    stack: ['React', 'JavaScript', 'Vite', 'CSS', 'EmailJS'],
-    demo: 'https://www.masteroll.net', // если есть
-    /* github: 'https://ivan1990nik.github.io/masteroll-react/', */
+      "Коммерческий сайт доставки еды. Реальный проект, используется бизнесом ежедневно. Полный цикл: от верстки до логики корзины и оформления заказа.",
+    stack: ["React", "JavaScript", "Vite", "CSS", "EmailJS"],
+    demo: "https://www.masteroll.net",
+
     highlight: true,
   },
   {
     title: "Посуточная аренда квартир",
-    description: "Сайт для сдачи квартир посуточно. Каталог, адаптив, форма заявки.",
-    stack: ['React', 'JavaScript', 'Vite', 'CSS', ],
-    /* demo: "https://...", */
-    github: 'https://masteroll.net',
-    highlight: true,
-    code: null
-  }
+    description:
+      "Сайт для сдачи квартир посуточно. Каталог, адаптив, форма заявки.",
+    stack: ["React", "JavaScript", "Vite", "CSS", "realtycalendar"],
+    github: "https://ivan1990nik.github.io/vsem/",
+    highlight: false,
+    code: null,
+  },
+  {
+    title: "Baked Clay — сайт для хендмейд бренда",
+    description:
+      "Имиджевый сайт для бренда авторской керамики. Передаёт эстетику ручной работы, подчёркивает уникальность продукта.",
+    stack: ["React", "JavaScript", "Vite", "CSS"],
+    demo: "https://baked-clay.vercel.app/",
+    backgroundImage: "/images/kiber.png", // фон с кружкой (путь к изображению)
+    highlight: false,
+    code: null,
+  },
 ];
 
 const Projects = () => {
@@ -32,9 +42,16 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`project-card ${
-                project.highlight ? 'highlight' : ''
-              }`}
+              className={`project-card ${project.highlight ? "highlight" : ""}`}
+              style={
+                project.backgroundImage
+                  ? {
+                      backgroundImage: `url(${project.backgroundImage})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }
+                  : {}
+              }
             >
               <h3 className="project-card__title">
                 {project.title}
@@ -43,9 +60,7 @@ const Projects = () => {
                 )}
               </h3>
 
-              <p className="project-card__description">
-                {project.description}
-              </p>
+              <p className="project-card__description">{project.description}</p>
 
               <ul className="project-card__stack">
                 {project.stack.map((tech, i) => (

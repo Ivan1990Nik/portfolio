@@ -1,6 +1,7 @@
 // src/components/header/Header.jsx
 import { useState } from 'react';
 import './header.css';
+import logo from "../../../public/images/logo.PNG"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,8 @@ const Header = () => {
     <header className="header">
       <div className="header__container">
         <div className="header__logo">
-          <span>Бро.dev</span>
+          <img src={logo} alt="logo" style={{width: 120}} />
+
         </div>
 
         {/* Desktop nav */}
