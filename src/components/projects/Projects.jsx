@@ -1,5 +1,7 @@
 // src/components/projects/Projects.jsx
 import "./projects.css";
+import kiber from "../../../public/images/kiber.png";
+
 
 const projects = [
   {
@@ -8,7 +10,6 @@ const projects = [
       "Коммерческий сайт доставки еды. Реальный проект, используется бизнесом ежедневно. Полный цикл: от верстки до логики корзины и оформления заказа.",
     stack: ["React", "JavaScript", "Vite", "CSS", "EmailJS"],
     demo: "https://www.masteroll.net",
-
     highlight: true,
   },
   {
@@ -21,12 +22,12 @@ const projects = [
     code: null,
   },
   {
-    title: "Baked Clay — сайт для хендмейд бренда",
+    title: "Yanas_decor — сайт для хендмейд бренда",
     description:
       "Имиджевый сайт для бренда авторской керамики. Передаёт эстетику ручной работы, подчёркивает уникальность продукта.",
     stack: ["React", "JavaScript", "Vite", "CSS"],
     demo: "https://baked-clay.vercel.app/",
-    backgroundImage: "/images/kiber.png", // фон с кружкой (путь к изображению)
+    backgroundImage: kiber, // фон с кружкой (путь к изображению)
     highlight: false,
     code: null,
   },

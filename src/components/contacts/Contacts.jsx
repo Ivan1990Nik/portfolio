@@ -8,13 +8,13 @@ const Contacts = () => {
         <h2 className="contacts__title">Контакты</h2>
 
         <p className="contacts__text">
-          Открыт к новым проектам, сотрудничеству и интересным идеям.
-          Напиши — обсудим.
+          Открыт к новым проектам, сотрудничеству и интересным идеям. Напиши —
+          обсудим.
         </p>
 
         <div className="contacts__links">
           <a
-            href="https://t.me/ivan_BroNik"
+            href="https://t.me/bro_devol"
             target="_blank"
             rel="noreferrer"
             className="contacts__item"
@@ -32,7 +32,6 @@ const Contacts = () => {
             <FaGithub />
             <span>GitHub</span>
           </a>
-
         </div>
       </div>
     </section>
